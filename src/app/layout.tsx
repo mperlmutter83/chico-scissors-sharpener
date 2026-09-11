@@ -51,6 +51,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* RFM site data - pushed before GTM loads */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  rfm: {
+    schema_version: "1.0",
+    site_id: "chico_scissors_sharpener",
+    provider_id: "a7709388-501b-4640-9ade-2950c27e4943",
+    provider_name: "Chico Scissor Sharpener",
+    service_category: "scissor_sharpening",
+    market: "chico"
+  }
+});`,
+          }}
+        />
+      </head>
       <body className={`${openSans.variable} ${playfair.variable} antialiased`}>
         <script
           type="application/ld+json"

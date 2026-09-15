@@ -41,6 +41,14 @@ export default function Footer() {
             (530) 444-1534
           </a>
         </p>
+        <p className="text-sm mt-2">
+          <a
+            href="/looking-for-work"
+            className="text-white/60 hover:text-mint transition-colors"
+          >
+            Looking for Work
+          </a>
+        </p>
       </div>
     </footer>
   );
